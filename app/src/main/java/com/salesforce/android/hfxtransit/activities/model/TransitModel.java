@@ -1,23 +1,19 @@
 package com.salesforce.android.hfxtransit.activities.model;
 
 import android.support.annotation.NonNull;
-import android.util.Log;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
-import com.google.transit.realtime.Alert;
 import com.google.transit.realtime.TripUpdate;
 import com.google.transit.realtime.VehiclePosition;
 import com.salesforce.android.hfxtransit.http.HfxTransitAdapter;
 import com.salesforce.android.hfxtransit.utils.AbstractHandler;
 import com.salesforce.android.service.common.utilities.control.Async;
 import com.salesforce.android.service.common.utilities.control.BasicAsync;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * Created by sthistle on 4/11/17.

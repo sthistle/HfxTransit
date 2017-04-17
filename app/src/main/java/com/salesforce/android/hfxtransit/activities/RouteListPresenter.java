@@ -2,12 +2,8 @@ package com.salesforce.android.hfxtransit.activities;
 
 import android.support.annotation.NonNull;
 import com.salesforce.android.hfxtransit.activities.model.TransitModel;
-import com.salesforce.android.hfxtransit.http.HfxTransitAdapter;
 import com.salesforce.android.hfxtransit.utils.AbstractHandler;
 import com.salesforce.android.service.common.utilities.control.Async;
-import java.util.Collections;
-import java.util.List;
-import java.util.Set;
 
 /**
  * Created by sthistle on 4/11/17.
@@ -41,5 +37,13 @@ public class RouteListPresenter {
         updateRoutes(transitModel);
       }
     });
+  }
+
+  public void requestAllBuses() {
+    //  mActivity.updateBusList(mModel);
+  }
+
+  public void requestBuses(long id) {
+    mActivity.updateBusList(mModel, id);
   }
 }
