@@ -1,8 +1,5 @@
 package com.salesforce.android.hfxtransit.csv;
 
-import com.opencsv.bean.CsvBind;
-import com.opencsv.bean.CsvBindByName;
-
 /**
  * Created by sthistle on 4/12/17.
  */
@@ -14,12 +11,12 @@ public class Stop {
   private static final int LAT_INDEX = 4;
   private static final int LON_INDEX = 5;
 
-  @CsvBindByName() private String stop_id;
+  private String stop_id;
   //@CsvBindByName() private String stop_code;
-  @CsvBindByName() private String stop_name;
+  private String stop_name;
   //@CsvBindByName() private String stop_desc;
-  @CsvBindByName() private String stop_lat;
-  @CsvBindByName() private String stop_lon;
+  private String stop_lat;
+  private String stop_lon;
   //@CsvBindByName() private String zone_id;
   //@CsvBindByName() private String stop_url;
   //@CsvBindByName() private String location_type;

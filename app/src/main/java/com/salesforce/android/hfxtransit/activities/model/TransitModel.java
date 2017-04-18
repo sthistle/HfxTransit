@@ -34,7 +34,7 @@ public class TransitModel {
     }
 
     for (VehiclePosition p : pos) {
-      mBusToLocationMap.put(p.trip.route_id, p);
+      mBusToLocationMap.put(p.trip.trip_id, p);
     }
   }
 

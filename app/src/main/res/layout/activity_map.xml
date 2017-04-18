@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context="com.salesforce.android.hfxtransit.activities.MapActivity"
+    >
+  <LinearLayout
+      android:id="@+id/control_layout"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+      <LinearLayout
+          android:id="@+id/control_route_layout"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:text="Route:"
+            />
+        <Spinner
+            android:id="@+id/map_route_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="2"
+            >
+        </Spinner>>
+      </LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/control_update_layout"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/control_route_layout"
+          >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:text="Update Every:"
+            />
+        <Spinner
+            android:id="@+id/map_time_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="2"
+            >
+        </Spinner>>
+      </LinearLayout>
+
+    </RelativeLayout>
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/map_layout"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/control_layout"
+      >
+    <fragment
+        android:id="@+id/map_fragment"
+        android:name="com.salesforce.android.hfxtransit.activities.BusPickerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        />
+  </LinearLayout>
+
+</RelativeLayout>

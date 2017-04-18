@@ -1,7 +1,5 @@
 package com.salesforce.android.hfxtransit.csv;
 
-import com.opencsv.bean.CsvBindByName;
-
 /**
  * Created by sthistle on 4/12/17.
  */
@@ -13,10 +11,10 @@ public class Trip {
   private static final int TRIP_ID_INDEX = 2;
   private static final int DISPLAY_NAME_INDEX = 3;
 
-  @CsvBindByName() private String route_id;
+  private String route_id;
   // @CsvBindByName() private String service_id;
-  @CsvBindByName() private String trip_id;
-  @CsvBindByName() private String trip_headsign;
+  private String trip_id;
+  private String trip_headsign;
 
   public Trip(String route, String trip, String sign) {
     route_id = route;
