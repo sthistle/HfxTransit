@@ -27,6 +27,7 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.salesforce.android.hfxtransit.R;
 import com.salesforce.android.hfxtransit.activities.model.BusModel;
+import com.salesforce.android.hfxtransit.csv.ConstantTransitModel;
 import java.util.HashMap;
 import java.util.List;
 
@@ -128,12 +129,11 @@ public class BusPickerFragment extends Fragment {
         for (BusModel b : model) {
           if (markerHashMap.containsKey(b.getName())) {
             Marker m = markerHashMap.get(b.getName());
-            //m.setPosition(b.getPosition());
-            //markerHashMap.get(b.getName()).setPosition(b.getPosition());
             animateMarker(markerHashMap.get(b.getName()), b.getPosition());
           } else {
-            Marker m =
-                map.addMarker(new MarkerOptions().position(b.getPosition()).title(b.getName()));
+            String name =
+                ConstantTransitModel.getInstance().getTrip(b.getName()).getTrip_headsign();
+            Marker m = map.addMarker(new MarkerOptions().position(b.getPosition()).title(name));
             m.showInfoWindow();
             markerHashMap.put(b.getName(), m);
           }
